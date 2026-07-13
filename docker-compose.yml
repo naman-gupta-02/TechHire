@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  ddb:
+    image: postgres:15-alpine
+    container_name: techhire_db
+    environment:
+      POSTGRES_USER: techhire
+      POSTGRES_PASSWORD: localdev
+      POSTGRES_DB: techhire_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U techhire"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: techhire_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local
