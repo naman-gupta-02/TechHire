@@ -1,7 +1,9 @@
+import os
+
 from .base import Job
 from .utils import fetch_jsearch_pages
 
-API_KEY = "57daa5cbf3msh1ee5d6df857d805p1c778ejsn9ccbe8f5bc01"
+API_KEY = os.getenv("RAPIDAPI_KEY", "")
 
 
 def fetch(query="software engineer", location="remote", max_pages=5, existing_ids=None) -> tuple[list[Job], bool]:

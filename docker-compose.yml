@@ -1,8 +1,10 @@
-version: "3.9"
-
 services:
   ddb:
-    image: postgres:15-alpine
+    # postgres:15-alpine + pgvector (see db/docker/Dockerfile for why it's
+    # built from source instead of using the pgvector/pgvector image)
+    build:
+      context: ./db/docker
+    image: techhire-postgres-pgvector
     container_name: techhire_db
     environment:
       POSTGRES_USER: techhire
@@ -28,6 +30,36 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: techhire_api
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://techhire:localdev@ddb:5432/techhire_db
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    depends_on:
+      ddb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    container_name: techhire_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
 
 volumes:
   postgres_data:

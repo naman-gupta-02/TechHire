@@ -5,6 +5,8 @@ import SkeletonCard from './components/SkeletonCard'
 import SlideOver from './components/SlideOver'
 import RefreshButton from './components/RefreshButton'
 import ResumeChecker from './components/ResumeChecker'
+import AskTechHire from './components/AskTechHire'
+import { API_BASE } from './utils/api'
 import { useJobs } from './hooks/useJobs'
 
 const DEFAULT_FILTERS = {
@@ -109,7 +111,7 @@ function Pagination({ page, totalPages, total, pageSize, onChange }) {
 }
 
 export default function App() {
-  const [view, setView] = useState('jobs') // 'jobs' | 'resume'
+  const [view, setView] = useState('jobs') // 'jobs' | 'resume' | 'ask'
   const [filters, setFilters] = useState(DEFAULT_FILTERS)
   const [page, setPage] = useState(1)
   const [selectedJob, setSelectedJob] = useState(null)
@@ -140,8 +142,30 @@ export default function App() {
     setFilters(DEFAULT_FILTERS)
   }
 
+  // Similar roles and RAG citations only carry a job id — load the full
+  // record so the slide-over has everything a list item would.
+  function openJobById(id) {
+    fetch(`${API_BASE}/jobs/${id}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setSelectedJob(j))
+      .catch(() => {})
+  }
+
+  const slideOver = (
+    <SlideOver job={selectedJob} onClose={() => setSelectedJob(null)} onSelectJob={openJobById} />
+  )
+
   if (view === 'resume') {
     return <ResumeChecker onBack={() => setView('jobs')} />
+  }
+
+  if (view === 'ask') {
+    return (
+      <>
+        <AskTechHire onBack={() => setView('jobs')} onOpenJob={openJobById} />
+        {slideOver}
+      </>
+    )
   }
 
   return (
@@ -202,6 +226,16 @@ export default function App() {
             <RefreshButton />
 
             <button
+              onClick={() => setView('ask')}
+              className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+              Ask
+            </button>
+
+            <button
               onClick={() => setView('resume')}
               className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
@@ -252,7 +286,7 @@ export default function App() {
       </main>
 
       {/* Slide-over detail panel */}
-      <SlideOver job={selectedJob} onClose={() => setSelectedJob(null)} />
+      {slideOver}
     </div>
   )
 }

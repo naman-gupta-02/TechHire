@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { formatSalary, getSkillClass, timeAgo, SOURCE_CLASS, SOURCE_LABEL, WORK_MODE_CLASS } from '../utils/format'
-
-const API_BASE = 'http://localhost:8000'
+import { API_BASE } from '../utils/api'
 
 function Section({ title, children }) {
   return (
@@ -67,7 +66,7 @@ function AiSummary({ jobId }) {
         <div className="space-y-3 animate-pulse">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
-            <span className="text-xs text-slate-400">Generating summary with Claude AI…</span>
+            <span className="text-xs text-slate-400">Generating summary with Groq AI…</span>
           </div>
           {[80, 95, 70].map((w, i) => (
             <div key={i} className={`h-3 bg-slate-100 rounded-full w-[${w}%]`} />
@@ -112,7 +111,7 @@ function AiSummary({ jobId }) {
         {/* Badge row */}
         <div className="flex items-center gap-2 mb-3">
           <span className="inline-flex items-center gap-1 text-xs font-medium bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">
-            ✦ Claude AI
+            ✦ Groq AI
           </span>
           {cached && (
             <span className="text-xs text-slate-400">cached</span>
@@ -135,7 +134,7 @@ function AiSummary({ jobId }) {
             setState('loading')
             setSummary(null)
             fetch(`${API_BASE}/jobs/${jobId}/summary?refresh=true`)
-              .then((r) => r.json())
+              .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
               .then((d) => { setSummary(d.summary); setCached(false); setState('done') })
               .catch(() => setState('error'))
           }}
@@ -187,8 +186,79 @@ function FullDescription({ text }) {
   )
 }
 
-export default function SlideOver({ job, onClose }) {
+function SimilarRoles({ jobId, onSelectJob }) {
+  const [state, setState] = useState({ status: 'loading', items: [] })
+
+  useEffect(() => {
+    if (!jobId) return
+    let cancelled = false
+    setState({ status: 'loading', items: [] })
+    fetch(`${API_BASE}/jobs/${jobId}/similar?k=5`)
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((d) => !cancelled && setState({ status: d.indexed ? 'done' : 'unindexed', items: d.similar }))
+      .catch(() => !cancelled && setState({ status: 'error', items: [] }))
+    return () => { cancelled = true }
+  }, [jobId])
+
+  // Not indexed (synthetic rows, or scraped since the last index build) or
+  // failed: hide the section rather than show an empty box.
+  if (state.status === 'unindexed' || state.status === 'error') return null
+  if (state.status === 'done' && !state.items.length) return null
+
+  return (
+    <Section title="Similar roles at other companies">
+      {state.status === 'loading' ? (
+        <div className="space-y-2 animate-pulse">
+          {[0, 1, 2].map((i) => <div key={i} className="h-10 bg-slate-100 rounded-lg" />)}
+        </div>
+      ) : (
+        <div className="divide-y divide-slate-100 border border-slate-100 rounded-xl">
+          {state.items.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => onSelectJob?.(s.id)}
+              className="w-full text-left px-4 py-2.5 hover:bg-slate-50 transition-colors flex items-center justify-between gap-3"
+            >
+              <div className="min-w-0">
+                <p className="text-sm font-medium text-slate-800 truncate">{s.title}</p>
+                <p className="text-xs text-slate-500 truncate">
+                  {s.company}{s.location && ` · ${s.location}`}{s.work_mode && ` · ${s.work_mode}`}
+                </p>
+              </div>
+              <span className="text-xs text-slate-400 flex-shrink-0" title="Cosine similarity of the two postings' embeddings">
+                {Math.round(s.similarity * 100)}%
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+    </Section>
+  )
+}
+
+function useJobDetail(jobId) {
+  // The list payload omits description/responsibilities/qualifications/
+  // benefits to keep GET /jobs light — fetch the full record once the
+  // panel opens for a specific job.
+  const [detail, setDetail] = useState(null)
+  const fetchedFor = useRef(null)
+
+  useEffect(() => {
+    if (!jobId || fetchedFor.current === jobId) return
+    fetchedFor.current = jobId
+    setDetail(null)
+    fetch(`${API_BASE}/jobs/${jobId}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setDetail)
+      .catch(() => setDetail(null))
+  }, [jobId])
+
+  return detail
+}
+
+export default function SlideOver({ job, onClose, onSelectJob }) {
   const isOpen = job != null
+  const detail = useJobDetail(job?.id)
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -273,28 +343,38 @@ export default function SlideOver({ job, onClose }) {
               <AiSummary jobId={job.id} />
 
               {/* Full description — collapsed by default */}
-              <FullDescription text={job.description} />
+              {detail ? (
+                <FullDescription text={detail.description} />
+              ) : (
+                <div className="space-y-2 animate-pulse mb-6">
+                  <div className="h-3 bg-slate-100 rounded-full w-[90%]" />
+                  <div className="h-3 bg-slate-100 rounded-full w-[75%]" />
+                </div>
+              )}
 
               {/* Responsibilities */}
-              {job.responsibilities?.length > 0 && (
+              {detail?.responsibilities?.length > 0 && (
                 <Section title="Responsibilities">
-                  <BulletList items={job.responsibilities} />
+                  <BulletList items={detail.responsibilities} />
                 </Section>
               )}
 
               {/* Qualifications */}
-              {job.qualifications?.length > 0 && (
+              {detail?.qualifications?.length > 0 && (
                 <Section title="Qualifications">
-                  <BulletList items={job.qualifications} />
+                  <BulletList items={detail.qualifications} />
                 </Section>
               )}
 
               {/* Benefits */}
-              {job.benefits?.length > 0 && (
+              {detail?.benefits?.length > 0 && (
                 <Section title="Benefits">
-                  <BulletList items={job.benefits} />
+                  <BulletList items={detail.benefits} />
                 </Section>
               )}
+
+              {/* Nearest postings by embedding (RAG index) */}
+              <SimilarRoles jobId={job.id} onSelectJob={onSelectJob} />
             </div>
 
             {/* Sticky footer */}

@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 from sqlalchemy import select
-from scraper import indeed, glassdoor, handshake, lever
+from scraper import indeed, glassdoor, handshake, lever, greenhouse, ashby
 from scraper.utils import filter_alive
 from db.session import init_db, SessionLocal
 from db.models import JobListing
@@ -39,11 +39,39 @@ SCRAPE_CONFIGS = [
     ("Handshake", handshake, {"query": "entry level engineer",     "location": "remote", "max_pages": 3}),
     ("Handshake", handshake, {"query": "software engineer intern", "location": "remote", "max_pages": 3}),
 
-    # Full-time + intern roles — Lever
-    ("Lever",     lever,     {"query": "software engineer",        "location": "remote", "max_pages": 5}),
-    ("Lever",     lever,     {"query": "backend engineer",         "location": "remote", "max_pages": 3}),
-    ("Lever",     lever,     {"query": "fullstack engineer",       "location": "remote", "max_pages": 3}),
-    ("Lever",     lever,     {"query": "software engineer intern", "location": "remote", "max_pages": 3}),
+    # Real company job boards — Greenhouse (public API, no auth, no ToS issue)
+    ("Greenhouse", greenhouse, {"board": "stripe"}),
+    ("Greenhouse", greenhouse, {"board": "airbnb"}),
+    ("Greenhouse", greenhouse, {"board": "coinbase"}),
+    ("Greenhouse", greenhouse, {"board": "robinhood"}),
+    ("Greenhouse", greenhouse, {"board": "affirm"}),
+    ("Greenhouse", greenhouse, {"board": "gitlab"}),
+    ("Greenhouse", greenhouse, {"board": "asana"}),
+    ("Greenhouse", greenhouse, {"board": "brex"}),
+    ("Greenhouse", greenhouse, {"board": "pinterest"}),
+    ("Greenhouse", greenhouse, {"board": "reddit"}),
+    ("Greenhouse", greenhouse, {"board": "cloudflare"}),
+    ("Greenhouse", greenhouse, {"board": "figma"}),
+    ("Greenhouse", greenhouse, {"board": "databricks"}),
+    ("Greenhouse", greenhouse, {"board": "discord"}),
+    ("Greenhouse", greenhouse, {"board": "dropbox"}),
+    ("Greenhouse", greenhouse, {"board": "instacart"}),
+    ("Greenhouse", greenhouse, {"board": "lyft"}),
+    ("Greenhouse", greenhouse, {"board": "twitch"}),
+    ("Greenhouse", greenhouse, {"board": "datadog"}),
+    ("Greenhouse", greenhouse, {"board": "mongodb"}),
+    ("Greenhouse", greenhouse, {"board": "squarespace"}),
+
+    # Real company job board — Lever (public API, no auth, no ToS issue)
+    ("Lever", lever, {"board": "palantir"}),
+
+    # Real company job boards — Ashby (public API, no auth, no ToS issue)
+    ("Ashby", ashby, {"board": "ramp"}),
+    ("Ashby", ashby, {"board": "notion"}),
+    ("Ashby", ashby, {"board": "plaid"}),
+    ("Ashby", ashby, {"board": "linear"}),
+    ("Ashby", ashby, {"board": "openai"}),
+    ("Ashby", ashby, {"board": "hex"}),
 ]
 
 
@@ -53,7 +81,7 @@ def _scrape_all(existing_ids: set[str]) -> tuple[list, dict[str, int], bool]:
     quota_exceeded = False
 
     for name, module, kwargs in SCRAPE_CONFIGS:
-        label = f"{name} ({kwargs['query']})"
+        label = f"{name} ({kwargs.get('query') or kwargs.get('board')})"
         print(f"Fetching {label}...")
         try:
             jobs, hit_quota = module.fetch(existing_ids=existing_ids, **kwargs)
@@ -69,6 +97,18 @@ def _scrape_all(existing_ids: set[str]) -> tuple[list, dict[str, int], bool]:
         time.sleep(3)  # pause between query batches
 
     return all_jobs, source_counts, quota_exceeded
+
+
+def _update_rag_index(log=lambda *_: None) -> dict:
+    """Embed new/changed postings for RAG (only the diff — see rag/indexer.py).
+    A failure here must not fail the scrape: listing and search still work,
+    only RAG results lag until the next successful index run."""
+    try:
+        from rag.indexer import index_jobs
+        with SessionLocal() as session:
+            return index_jobs(session, log=log)
+    except Exception as e:
+        return {"error": f"{type(e).__name__}: {e}"}
 
 
 def run():
@@ -102,6 +142,9 @@ def run():
     print("\nReparsing fields on all jobs...")
     reparse_result = reparse_all()
     print(f"  ✓ Reparsed: {reparse_result['updated']} updated, {reparse_result['unchanged']} unchanged")
+
+    print("\nUpdating RAG index...")
+    print(f"  {_update_rag_index(log=lambda msg: print(f'  {msg}'))}")
     print(f"\nDone.\n")
 
 
@@ -131,6 +174,7 @@ def refresh() -> dict:
         "sources": source_counts,
         "quota_exceeded": quota_exceeded,
         "reparsed": reparse_result["updated"],
+        "rag_index": _update_rag_index(),
     }
 
 

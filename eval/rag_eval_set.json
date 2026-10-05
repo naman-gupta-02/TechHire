@@ -1,0 +1,1050 @@
+{
+  "seed": 7,
+  "generator": "openai/gpt-oss-20b",
+  "items": [
+    {
+      "id": "a001",
+      "answerable": true,
+      "question": "What are the key responsibilities and technical focus areas for a senior software engineer who specializes in optimizing core deep\u2011learning kernels for GPU and accelerator hardware?",
+      "job_id": 392,
+      "chunk_id": 2169,
+      "gold_job_ids": [
+        392
+      ],
+      "company": "Databricks",
+      "title": "Staff Software Engineer - GenAI Performance and Kernel",
+      "section": "What You Will Do"
+    },
+    {
+      "id": "a002",
+      "answerable": true,
+      "question": "What are the key skills and experience required for a senior software engineer role focused on building highly available, scalable cloud storage services using Rust?",
+      "job_id": 560,
+      "chunk_id": 3170,
+      "gold_job_ids": [
+        560
+      ],
+      "company": "MongoDB",
+      "title": "Senior Software Engineer, Storage Layer Services",
+      "section": "Strong candidates may also have"
+    },
+    {
+      "id": "a003",
+      "answerable": true,
+      "question": "What senior full\u2011stack engineering roles require 7+ years of experience, strong backend skills in Java, Kotlin, or Python, and expertise in building scalable distributed systems, REST/GraphQL APIs, and modern React/TypeScript frontends?",
+      "job_id": 207,
+      "chunk_id": 1219,
+      "gold_job_ids": [
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "company": "Brex",
+      "title": "Senior Software Engineer, Full Stack",
+      "section": "Requirements"
+    },
+    {
+      "id": "a004",
+      "answerable": true,
+      "question": "What early\u2011career software engineering roles in the San\u202fFrancisco or New\u202fYork area involve working with React, TypeScript, Node.js, PostgreSQL, and Elasticsearch, emphasize the social impact of technology, and offer a base salary between $130,000 and $150,000?",
+      "job_id": 800,
+      "chunk_id": 4598,
+      "gold_job_ids": [
+        800
+      ],
+      "company": "Notion",
+      "title": "Software Engineer, Early Career (AI)",
+      "section": "NICE TO HAVES"
+    },
+    {
+      "id": "a005",
+      "answerable": true,
+      "question": "What kind of backend engineering role involves building and scaling distributed state\u2011machine services for ride\u2011sharing, integrating new vehicle and rider features, and working closely with product, data science, and analytics teams?",
+      "job_id": 483,
+      "chunk_id": 2658,
+      "gold_job_ids": [
+        483
+      ],
+      "company": "Lyft",
+      "title": "Software Engineer, Fulfillment Core Services",
+      "section": "Overview"
+    },
+    {
+      "id": "a006",
+      "answerable": true,
+      "question": "What kind of software engineering role involves traveling extensively, working with clients on site, and requires a strong background in data structures, cloud infrastructure, and front\u2011end frameworks?",
+      "job_id": 630,
+      "chunk_id": 3645,
+      "gold_job_ids": [
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633
+      ],
+      "company": "Palantir",
+      "title": "Forward Deployed Software Engineer",
+      "section": "Life at Palantir"
+    },
+    {
+      "id": "a007",
+      "answerable": true,
+      "question": "What kind of internship role involves working closely with government agencies to solve real-world problems using data analytics and software engineering?",
+      "job_id": 654,
+      "chunk_id": 3709,
+      "gold_job_ids": [
+        654
+      ],
+      "company": "Palantir",
+      "title": "Forward Deployed Software Engineer, Internship - AUS Government",
+      "section": "The Role"
+    },
+    {
+      "id": "a008",
+      "answerable": true,
+      "question": "What are some career opportunities for a software engineer who specializes in low\u2011level hardware systems, Linux kernel tuning, GPU cluster debugging, and automated fleet management for high\u2011availability compute environments?",
+      "job_id": 865,
+      "chunk_id": 4959,
+      "gold_job_ids": [
+        865
+      ],
+      "company": "OpenAI",
+      "title": "Software Engineer, Hardware Health",
+      "section": "BONUS IF YOU HAVE"
+    },
+    {
+      "id": "a009",
+      "answerable": true,
+      "question": "What responsibilities and expectations are typical for a senior backend engineering lead working on enterprise data platform products?",
+      "job_id": 328,
+      "chunk_id": 1828,
+      "gold_job_ids": [
+        328
+      ],
+      "company": "Databricks",
+      "title": "Sr Staff Software Engineer (Backend)",
+      "section": "(P-1174)"
+    },
+    {
+      "id": "a010",
+      "answerable": true,
+      "question": "What senior site reliability engineer roles focus on building automated CI/CD pipelines, Kubernetes, and cloud infrastructure for a small, software\u2011centric team?",
+      "job_id": 566,
+      "chunk_id": 3205,
+      "gold_job_ids": [
+        565,
+        566
+      ],
+      "company": "MongoDB",
+      "title": "Site Reliability Engineer (Senior or Staff), Deployments",
+      "section": "The ideal candidate should"
+    },
+    {
+      "id": "a011",
+      "answerable": true,
+      "question": "What type of senior software engineering position involves building service tools within a fast\u2011moving, mission\u2011driven company that emphasizes teamwork",
+      "job_id": 115,
+      "chunk_id": 704,
+      "gold_job_ids": [
+        115
+      ],
+      "company": "Airbnb",
+      "title": "Senior Software Engineer, Service Tools   ",
+      "section": "The Community You Will Join"
+    },
+    {
+      "id": "a012",
+      "answerable": true,
+      "question": "What responsibilities and projects would a senior software engineer focusing on security architecture and vulnerability remediation typically handle in a large tech company?",
+      "job_id": 182,
+      "chunk_id": 921,
+      "gold_job_ids": [
+        182
+      ],
+      "company": "Asana",
+      "title": "Senior Software Engineer, Security Development",
+      "section": "What you\u2019ll achieve"
+    },
+    {
+      "id": "a013",
+      "answerable": true,
+      "question": "What responsibilities and technical focus would a senior software engineer in a data platform role have when building a cross\u2011company analytics system and managing large\u2011scale data pipelines across multiple cloud environments?",
+      "job_id": 378,
+      "chunk_id": 2096,
+      "gold_job_ids": [
+        378
+      ],
+      "company": "Databricks",
+      "title": "Staff Software Engineer - Data Platform",
+      "section": "The impact you will have"
+    },
+    {
+      "id": "a014",
+      "answerable": true,
+      "question": "What kind of engineering role involves integrating advanced robotics hardware with AI software to develop general\u2011purpose robots that operate in real\u2011world environments?",
+      "job_id": 892,
+      "chunk_id": 5055,
+      "gold_job_ids": [
+        892
+      ],
+      "company": "OpenAI",
+      "title": "Simulation Infrastructure Engineer",
+      "section": "About the Team"
+    },
+    {
+      "id": "a015",
+      "answerable": true,
+      "question": "What are the key qualifications and responsibilities for a senior software engineer role focused on building and maintaining large-scale distributed systems and observability tools?",
+      "job_id": 725,
+      "chunk_id": 4108,
+      "gold_job_ids": [
+        724,
+        725
+      ],
+      "company": "Palantir",
+      "title": "Software Engineer - Environment Platform",
+      "section": "Life at Palantir"
+    },
+    {
+      "id": "a016",
+      "answerable": true,
+      "question": "What kind of software engineering position focuses on building multi\u2011cloud data systems, including query engines, vector databases, and scalable infrastructure like auto\u2011sharders and load balancers, while also supporting the tooling and language stacks that integrate them?",
+      "job_id": 415,
+      "chunk_id": 2242,
+      "gold_job_ids": [
+        414,
+        415
+      ],
+      "company": "Databricks",
+      "title": "Systems PhD - Software Engineer ",
+      "section": "P-1299"
+    },
+    {
+      "id": "a017",
+      "answerable": true,
+      "question": "What is a senior software engineering role focused on building a large\u2011scale data platform using technologies like Iceberg, Flink, Trino, Kafka, Spark, Snowflake, and AWS, where I would have significant ownership and impact in a small, fast\u2011moving team?",
+      "job_id": 450,
+      "chunk_id": 2484,
+      "gold_job_ids": [
+        450
+      ],
+      "company": "Instacart",
+      "title": "Staff Software Engineer,  Data Governance & Foundations",
+      "section": "Overview"
+    },
+    {
+      "id": "a018",
+      "answerable": true,
+      "question": "What does a new\u2011grad software engineering role look like in terms of working through the entire product lifecycle and meeting real customers?",
+      "job_id": 748,
+      "chunk_id": 4220,
+      "gold_job_ids": [
+        747,
+        748,
+        749
+      ],
+      "company": "Palantir",
+      "title": "Software Engineer, New Grad",
+      "section": "Core Responsibilities"
+    },
+    {
+      "id": "a019",
+      "answerable": true,
+      "question": "What are the key qualifications and skills needed for a senior infrastructure engineer role focused on building highly available production systems, working with Typescript or Python, Terraform, Cloudflare, and AWS, and creating simple developer experiences?",
+      "job_id": 38,
+      "chunk_id": 238,
+      "gold_job_ids": [
+        38
+      ],
+      "company": "Stripe",
+      "title": "Infrastructure Engineer, Privy",
+      "section": "Minimum requirements"
+    },
+    {
+      "id": "a020",
+      "answerable": true,
+      "question": "What responsibilities do senior software engineers in data platform roles typically have, especially around building and maintaining data warehouses, streaming pipelines, and governance?",
+      "job_id": 203,
+      "chunk_id": 1188,
+      "gold_job_ids": [
+        203,
+        204
+      ],
+      "company": "Brex",
+      "title": "Senior Software Engineer, Data Enablement Platform",
+      "section": "Responsibilities"
+    },
+    {
+      "id": "a021",
+      "answerable": true,
+      "question": "What kind of backend software engineering role in the marketing product space offers flexible PTO, a health and wellness stipend, pet insurance, and relocation support for NYC or SF?",
+      "job_id": 786,
+      "chunk_id": 4513,
+      "gold_job_ids": [
+        786
+      ],
+      "company": "Ramp",
+      "title": "Software Engineer, Backend, Marketing Product",
+      "section": "UNITED STATES"
+    },
+    {
+      "id": "a022",
+      "answerable": true,
+      "question": "What senior software engineering roles in San\u202fFrancisco involve building high\u2011performance vector search systems and working on approximate nearest neighbor queries for large\u2011scale data?",
+      "job_id": 586,
+      "chunk_id": 3356,
+      "gold_job_ids": [
+        586
+      ],
+      "company": "MongoDB",
+      "title": "Software Engineer 3, Atlas Vector Search",
+      "section": "Overview"
+    },
+    {
+      "id": "a023",
+      "answerable": true,
+      "question": "What kind of senior software engineering role focuses on building high\u2011performance, distributed pricing systems for a ridesharing marketplace and involves solving latency\u2011sensitive concurrency, large\u2011scale data, and ML challenges?",
+      "job_id": 476,
+      "chunk_id": 2622,
+      "gold_job_ids": [
+        476
+      ],
+      "company": "Lyft",
+      "title": "Senior Software Engineer, Pricing",
+      "section": "Overview"
+    },
+    {
+      "id": "a024",
+      "answerable": true,
+      "question": "What are the responsibilities and tech stack for a backend software engineer focused on building secure financial data APIs and services?",
+      "job_id": 815,
+      "chunk_id": 4706,
+      "gold_job_ids": [
+        815,
+        818
+      ],
+      "company": "Plaid",
+      "title": "Software Engineer, Backend",
+      "section": "Overview"
+    },
+    {
+      "id": "a025",
+      "answerable": true,
+      "question": "What senior data science positions focus on building causal\u2011inference frameworks to measure long\u2011term product impact and evolving metric effects?",
+      "job_id": 132,
+      "chunk_id": 803,
+      "gold_job_ids": [
+        132
+      ],
+      "company": "Airbnb",
+      "title": "Staff Data Scientist - Long Term Impact",
+      "section": "A Typical Day"
+    },
+    {
+      "id": "a026",
+      "answerable": true,
+      "question": "What responsibilities and impact would a senior reliability engineer have in building an incident management platform that improves service resilience and operational efficiency?",
+      "job_id": 114,
+      "chunk_id": 699,
+      "gold_job_ids": [
+        114
+      ],
+      "company": "Airbnb",
+      "title": "Senior Software Engineer, Reliability Engineering Team",
+      "section": "The Difference You Will Make"
+    },
+    {
+      "id": "a027",
+      "answerable": true,
+      "question": "What are the key responsibilities and technical challenges for a software engineer working on end\u2011to\u2011end AI meeting capture and summarization systems that need to be reliable, observable, and enterprise\u2011ready?",
+      "job_id": 797,
+      "chunk_id": 4579,
+      "gold_job_ids": [
+        797
+      ],
+      "company": "Notion",
+      "title": "Software Engineer, AI Capture",
+      "section": "WHAT YOU'LL ACHIEVE"
+    },
+    {
+      "id": "a028",
+      "answerable": true,
+      "question": "What senior backend engineering positions involve leading architecture for large-scale distributed systems, mentoring senior engineers, and handling financial or stateful account data?",
+      "job_id": 140,
+      "chunk_id": 847,
+      "gold_job_ids": [
+        140
+      ],
+      "company": "Airbnb",
+      "title": "Staff Software Engineer, Passport & Commerce (Backend)",
+      "section": "Your Expertise"
+    },
+    {
+      "id": "a029",
+      "answerable": true,
+      "question": "What does a senior full\u2011stack engineer do when building a platform that lets large businesses manage multiple payment accounts under a single umbrella?",
+      "job_id": 79,
+      "chunk_id": 480,
+      "gold_job_ids": [
+        79
+      ],
+      "company": "Stripe",
+      "title": "Staff Fullstack Engineer, User Auth Experience",
+      "section": "About the team"
+    },
+    {
+      "id": "a030",
+      "answerable": true,
+      "question": "What responsibilities and projects would a senior engineer focused on improving system reliability and deployment practices expect to handle in a large fintech company?",
+      "job_id": 161,
+      "chunk_id": 857,
+      "gold_job_ids": [
+        161
+      ],
+      "company": "Coinbase",
+      "title": "Senior Software Engineer, Core Reliability",
+      "section": "What you'll do"
+    },
+    {
+      "id": "a031",
+      "answerable": true,
+      "question": "What are the key skills and responsibilities for a mid-level software engineer who works on SEO and AI-powered search visibility in a fast\u2011paced startup?",
+      "job_id": 447,
+      "chunk_id": 2463,
+      "gold_job_ids": [
+        447
+      ],
+      "company": "Instacart",
+      "title": "Software Engineer II, Technical Search Visibility",
+      "section": "Preferred Qualifications"
+    },
+    {
+      "id": "a032",
+      "answerable": true,
+      "question": "What are the main responsibilities and technical challenges for an engineer building and maintaining the core infrastructure that runs AI agents capable of using tools, executing code, and completing long\u2011term tasks in real development environments?",
+      "job_id": 970,
+      "chunk_id": 5516,
+      "gold_job_ids": [
+        970
+      ],
+      "company": "OpenAI",
+      "title": "AI Systems Engineer, Codex Agents",
+      "section": "What You\u2019ll Do"
+    },
+    {
+      "id": "a033",
+      "answerable": true,
+      "question": "What senior software engineering role involves leading large-scale distributed systems, driving reliability and operational excellence, mentoring other senior engineers, and collaborating with cross-functional teams like product, design, compliance, and risk?",
+      "job_id": 223,
+      "chunk_id": 1324,
+      "gold_job_ids": [
+        223,
+        224,
+        225,
+        226
+      ],
+      "company": "Brex",
+      "title": "Staff Software Engineer, Banking",
+      "section": "Requirements"
+    },
+    {
+      "id": "a034",
+      "answerable": true,
+      "question": "What senior software engineering positions focus on building AI\u2011powered tooling and internal platforms, require 5+ years of production experience, and emphasize product judgment in ambiguous environments?",
+      "job_id": 831,
+      "chunk_id": 4796,
+      "gold_job_ids": [
+        831
+      ],
+      "company": "Plaid",
+      "title": "Senior Software Engineer - AI Tooling",
+      "section": "Must have"
+    },
+    {
+      "id": "a035",
+      "answerable": true,
+      "question": "What responsibilities and focus areas would a software engineer working on GPU infrastructure and high\u2011performance computing systems have in a team that manages large\u2011scale data\u2011center environments and prioritizes safety and reliability over rapid expansion?",
+      "job_id": 882,
+      "chunk_id": 5044,
+      "gold_job_ids": [
+        882
+      ],
+      "company": "OpenAI",
+      "title": "Software Engineer, GPU Infrastructure - HPC",
+      "section": "About the team"
+    },
+    {
+      "id": "a036",
+      "answerable": true,
+      "question": "What kind of senior engineering role involves building a scalable accounting platform, integrating ERP systems like NetSuite and QuickBooks, designing idempotent distributed services, and working with ML models for GL coding?",
+      "job_id": 197,
+      "chunk_id": 1152,
+      "gold_job_ids": [
+        197
+      ],
+      "company": "Brex",
+      "title": "Senior Software Engineer, Accounting Engineering",
+      "section": "Responsibilities"
+    },
+    {
+      "id": "a037",
+      "answerable": true,
+      "question": "What is the work\u2011from\u2011home policy for a senior software engineering role focused on AI developer tools in a New\u202fYork City office?",
+      "job_id": 191,
+      "chunk_id": 1103,
+      "gold_job_ids": [
+        191
+      ],
+      "company": "Asana",
+      "title": "Staff Software Engineer, AI Developer Experience",
+      "section": "Overview"
+    },
+    {
+      "id": "a038",
+      "answerable": true,
+      "question": "What does a senior software engineer do on a large\u2011scale machine\u2011learning platform that serves millions of users and handles billions of transactions per year?",
+      "job_id": 90,
+      "chunk_id": 558,
+      "gold_job_ids": [
+        89,
+        90
+      ],
+      "company": "Stripe",
+      "title": "Staff Software Engineer, Machine Learning Platform",
+      "section": "About the team"
+    },
+    {
+      "id": "a039",
+      "answerable": true,
+      "question": "What are the responsibilities and technical focus areas for a senior software engineer working on building a distributed, schema\u2011flexible document database in a North American office?",
+      "job_id": 593,
+      "chunk_id": 3408,
+      "gold_job_ids": [
+        593
+      ],
+      "company": "MongoDB",
+      "title": "Staff Software Engineer - Query Execution",
+      "section": "Overview"
+    },
+    {
+      "id": "a040",
+      "answerable": true,
+      "question": "What responsibilities and skills are required for a senior engineer who builds AI\u2011powered solutions on the full Workday stack, including Studio, Extend, Core Connectors, and Prism Analytics, and works closely with HR, Payroll, Finance, and Benefits teams?",
+      "job_id": 471,
+      "chunk_id": 2592,
+      "gold_job_ids": [
+        471
+      ],
+      "company": "Lyft",
+      "title": "Senior Platform Engineer, Workday Extend & Integrations",
+      "section": "Overview"
+    },
+    {
+      "id": "a041",
+      "answerable": true,
+      "question": "What does a frontend engineer in a growth-focused product team do to design and build interactive tools that drive new user acquisition and conversion?",
+      "job_id": 25,
+      "chunk_id": 154,
+      "gold_job_ids": [
+        25
+      ],
+      "company": "Stripe",
+      "title": "Frontend Engineer, Expansion",
+      "section": "What you\u2019ll do"
+    },
+    {
+      "id": "a042",
+      "answerable": true,
+      "question": "What benefits and career development opportunities are offered for a senior software engineer focused on logs and observability pipelines?",
+      "job_id": 522,
+      "chunk_id": 2919,
+      "gold_job_ids": [
+        522
+      ],
+      "company": "Datadog",
+      "title": "Staff Software Engineer - Logs Observability Pipelines ",
+      "section": "Benefits and Growth"
+    },
+    {
+      "id": "a043",
+      "answerable": true,
+      "question": "What senior software engineering position involves building and maintaining a high\u2011performance Rust client library for a streaming platform, with bindings for Java, Go, and Python, and requires handling hundreds of millions of messages per second while focusing on observability, reliability, and scaling?",
+      "job_id": 513,
+      "chunk_id": 2849,
+      "gold_job_ids": [
+        513
+      ],
+      "company": "Datadog",
+      "title": "Senior Software Engineer - Streaming Platform ",
+      "section": "Senior Software Engineer - Streaming Platform Client"
+    },
+    {
+      "id": "a044",
+      "answerable": true,
+      "question": "What kind of software engineering role focuses on building efficient data pipelines with AWS, Kubernetes, Apache Airflow, Flink, and Kafka, and involves using AI/ML to improve productivity and customer support for a large transportation platform?",
+      "job_id": 489,
+      "chunk_id": 2701,
+      "gold_job_ids": [
+        489
+      ],
+      "company": "Lyft",
+      "title": "Software Engineer, Routing",
+      "section": "Overview"
+    },
+    {
+      "id": "a045",
+      "answerable": true,
+      "question": "What are the key qualifications and responsibilities for a senior software engineer who specializes in backend infrastructure and cloud operations at a large technology company?",
+      "job_id": 179,
+      "chunk_id": 1058,
+      "gold_job_ids": [
+        179
+      ],
+      "company": "Asana",
+      "title": "Senior Software Engineer, Development Infrastructure",
+      "section": "About you"
+    },
+    {
+      "id": "a046",
+      "answerable": true,
+      "question": "What senior software engineering positions involve working on large, well\u2011maintained codebases with TypeScript and React, emphasize high\u2011quality code and user experience, and require strong collaboration and communication skills?",
+      "job_id": 174,
+      "chunk_id": 1019,
+      "gold_job_ids": [
+        174,
+        175
+      ],
+      "company": "Asana",
+      "title": "Senior Software Engineer",
+      "section": "About you"
+    },
+    {
+      "id": "a047",
+      "answerable": true,
+      "question": "What are the health, dental, vision, life, disability, fertility, retirement, and employee assistance benefits offered for a software engineering role in production engineering in Canada?",
+      "job_id": 785,
+      "chunk_id": 4505,
+      "gold_job_ids": [
+        785
+      ],
+      "company": "Ramp",
+      "title": "Software Engineer, Production Engineering",
+      "section": "CANADA"
+    },
+    {
+      "id": "a048",
+      "answerable": true,
+      "question": "What kind of senior backend engineering role focuses on building real\u2011time fraud detection and incident response systems for consumer financial products?",
+      "job_id": 152,
+      "chunk_id": 906,
+      "gold_job_ids": [
+        152
+      ],
+      "company": "Coinbase",
+      "title": "Senior Software Engineer, Backend (Consumer - Risk)",
+      "section": "What you'll do"
+    },
+    {
+      "id": "a049",
+      "answerable": true,
+      "question": "What are the typical benefits and perks offered for a senior software engineering position in a large U.S. tech company?",
+      "job_id": 774,
+      "chunk_id": 4392,
+      "gold_job_ids": [
+        774
+      ],
+      "company": "Ramp",
+      "title": "Software Engineer, Enterprise Product",
+      "section": "UNITED STATES"
+    },
+    {
+      "id": "a050",
+      "answerable": true,
+      "question": "What kind of security engineer position focuses on building and operating detection systems and workflows in a cloud\u2011native environment, where I\u2019d write high\u2011signal detections, improve the platform, and participate in incident response?",
+      "job_id": 801,
+      "chunk_id": 4600,
+      "gold_job_ids": [
+        801
+      ],
+      "company": "Notion",
+      "title": "Security Engineer, Detection and Response, San Francisco",
+      "section": "ABOUT THE ROLE"
+    },
+    {
+      "id": "a051",
+      "answerable": true,
+      "question": "What does a senior software engineering role focused on building AI-driven tooling and internal platforms for software development look like?",
+      "job_id": 834,
+      "chunk_id": 4722,
+      "gold_job_ids": [
+        834
+      ],
+      "company": "Plaid",
+      "title": "Staff Software Engineer - AI & Intelligent Tooling",
+      "section": "Team Description"
+    },
+    {
+      "id": "a052",
+      "answerable": true,
+      "question": "What are the key technical and soft\u2011skills requirements for a software engineering role focused on building and maintaining AI\u2011driven agent workflows and tooling?",
+      "job_id": 795,
+      "chunk_id": 4558,
+      "gold_job_ids": [
+        795
+      ],
+      "company": "Notion",
+      "title": "Software Engineer, Developer Experience",
+      "section": "SKILLS YOU'LL NEED TO BRING"
+    },
+    {
+      "id": "a053",
+      "answerable": true,
+      "question": "What kind of senior product security engineering role focuses on offensive security techniques and scaling defect discovery across a large e\u2011commerce platform?",
+      "job_id": 434,
+      "chunk_id": 2356,
+      "gold_job_ids": [
+        433,
+        434
+      ],
+      "company": "Instacart",
+      "title": "Senior Product Security Engineer II",
+      "section": "Overview"
+    },
+    {
+      "id": "a054",
+      "answerable": true,
+      "question": "What kind of senior engineering role focuses on designing and scaling a credit\u2011insights platform that uses cash\u2011flow data to help lenders make more holistic underwriting decisions?",
+      "job_id": 835,
+      "chunk_id": 4744,
+      "gold_job_ids": [
+        835
+      ],
+      "company": "Plaid",
+      "title": "Staff Software Engineer - Credit Insights",
+      "section": "Overview"
+    },
+    {
+      "id": "a055",
+      "answerable": true,
+      "question": "What senior software engineering roles involve building and using internal tooling, shaping product strategy, collaborating with experienced teammates, and offering competitive global benefits and continuous learning opportunities?",
+      "job_id": 510,
+      "chunk_id": 2825,
+      "gold_job_ids": [
+        508,
+        509,
+        510
+      ],
+      "company": "Datadog",
+      "title": "Senior Software Engineer - REDAPL Graph Engine",
+      "section": "Benefits and Growth"
+    },
+    {
+      "id": "a056",
+      "answerable": true,
+      "question": "What qualifications and experience are required for a mid\u2011level site reliability engineer role?",
+      "job_id": 446,
+      "chunk_id": 2457,
+      "gold_job_ids": [
+        446
+      ],
+      "company": "Instacart",
+      "title": "Site Reliability Engineer II",
+      "section": "Minimum Qualifications"
+    },
+    {
+      "id": "a057",
+      "answerable": true,
+      "question": "Looking for a data scientist position that involves full\u2011stack development, designing experiments, and working closely with product, engineering, and data teams to turn raw data into actionable insights?",
+      "job_id": 780,
+      "chunk_id": 4453,
+      "gold_job_ids": [
+        780
+      ],
+      "company": "Ramp",
+      "title": "Data Scientist",
+      "section": "WHAT YOU\u2019LL DO"
+    },
+    {
+      "id": "a058",
+      "answerable": true,
+      "question": "What are the main responsibilities and daily tools used for a mid-level systems engineering role that focuses on building production features, integrating AI coding tools, and collaborating with product teams to solve both technical and business challenges?",
+      "job_id": 527,
+      "chunk_id": 2947,
+      "gold_job_ids": [
+        527
+      ],
+      "company": "Datadog",
+      "title": "Systems Engineer 2, Technical Solutions (US-East)",
+      "section": "What You\u2019ll Do"
+    },
+    {
+      "id": "a059",
+      "answerable": true,
+      "question": "What kind of software engineering position focuses on building AI agents, data tools, and product initiatives, requires strong testing and design standards, and offers hybrid work in San\u202fFrancisco or New\u202fYork City?",
+      "job_id": 1037,
+      "chunk_id": 5901,
+      "gold_job_ids": [
+        1037
+      ],
+      "company": "Hex",
+      "title": "Software Engineer, AI Agent",
+      "section": "ABOUT THE ROLE"
+    },
+    {
+      "id": "a060",
+      "answerable": true,
+      "question": "What senior data engineering management positions involve building self\u2011serve analytics platforms, integrating AI/LLM tools into the workflow, improving compute/storage economics, and managing data governance while working in a pod or embedded model",
+      "job_id": 422,
+      "chunk_id": 2311,
+      "gold_job_ids": [
+        421,
+        422
+      ],
+      "company": "Dropbox",
+      "title": "Senior Manager, Data Engineering",
+      "section": "Preferred Qualifications"
+    },
+    {
+      "id": "a061",
+      "answerable": true,
+      "question": "What responsibilities and impact would a senior engineering lead have when defining long\u2011term architecture and integrating AI into product and development processes for a large cloud\u2011storage company?",
+      "job_id": 419,
+      "chunk_id": 2282,
+      "gold_job_ids": [
+        418,
+        419
+      ],
+      "company": "Dropbox",
+      "title": "Principal Software Engineer, Core Sharing & Collaboration",
+      "section": "Role Description"
+    },
+    {
+      "id": "a062",
+      "answerable": true,
+      "question": "What are the key technical skills and experience required for a senior backend developer focused on building data engineering pipelines with Snowflake or Databricks?",
+      "job_id": 162,
+      "chunk_id": 954,
+      "gold_job_ids": [
+        162
+      ],
+      "company": "Coinbase",
+      "title": "Senior Software Engineer, Data Engineering Platform",
+      "section": "Required Skills and Experience"
+    },
+    {
+      "id": "a063",
+      "answerable": true,
+      "question": "What are the responsibilities and tech stack for a senior backend engineer working on a web\u2011based notebook platform that uses TypeScript, GraphQL, Postgres, Redis, Kubernetes, Terraform, Helm, and AWS?",
+      "job_id": 1039,
+      "chunk_id": 5914,
+      "gold_job_ids": [
+        1039
+      ],
+      "company": "Hex",
+      "title": "Software Engineer, Backend (Product)",
+      "section": "OUR STACK"
+    },
+    {
+      "id": "a064",
+      "answerable": true,
+      "question": "What responsibilities and team structure would a senior data engineering manager have when overseeing end\u2011to\u2011end data pipelines and self\u2011serve analytics for a large tech company?",
+      "job_id": 421,
+      "chunk_id": 2302,
+      "gold_job_ids": [
+        421,
+        422
+      ],
+      "company": "Dropbox",
+      "title": "Senior Manager, Data Engineering",
+      "section": "Role Description"
+    },
+    {
+      "id": "a065",
+      "answerable": true,
+      "question": "What kind of infrastructure engineering role focuses on building and scaling distributed storage systems, working with databases like MySQL, Postgres, and Cassandra, and improving reliability and performance while collaborating with cross\u2011functional teams?",
+      "job_id": 417,
+      "chunk_id": 2273,
+      "gold_job_ids": [
+        417
+      ],
+      "company": "Dropbox",
+      "title": "Infrastructure Software Engineer, Metadata Core",
+      "section": "Preferred Qualifications"
+    },
+    {
+      "id": "a066",
+      "answerable": true,
+      "question": "What are the key responsibilities and technical leadership duties of a senior software engineer who oversees billing, payments, and subscription systems?",
+      "job_id": 602,
+      "chunk_id": 3479,
+      "gold_job_ids": [
+        602
+      ],
+      "company": "Squarespace",
+      "title": "Staff Software Engineer, Revenue Systems",
+      "section": "Overview"
+    },
+    {
+      "id": "a067",
+      "answerable": true,
+      "question": "What responsibilities and skill requirements are typical for a senior data scientist role focused on customer experience analytics that involves building and deploying LLM\u2011based NLP solutions and communicating results to executives?",
+      "job_id": 146,
+      "chunk_id": 881,
+      "gold_job_ids": [
+        146
+      ],
+      "company": "Coinbase",
+      "title": "Senior Data Scientist, CX Analytics",
+      "section": "Required Skills and Experience"
+    },
+    {
+      "id": "a068",
+      "answerable": true,
+      "question": "What does a senior engineering manager role in a payments infrastructure team look like, and what responsibilities and team dynamics are involved?",
+      "job_id": 599,
+      "chunk_id": 3455,
+      "gold_job_ids": [
+        599
+      ],
+      "company": "Squarespace",
+      "title": "Software Engineering Manager - Payments ",
+      "section": "Overview"
+    },
+    {
+      "id": "a069",
+      "answerable": true,
+      "question": "What kind of support engineering role works on a design\u2011driven online platform that offers website building, ecommerce, domain registration, marketing tools, scheduling, and social media management?",
+      "job_id": 603,
+      "chunk_id": 3495,
+      "gold_job_ids": [
+        603
+      ],
+      "company": "Squarespace",
+      "title": "Systems Engineer, Support Platform",
+      "section": "About Squarespace"
+    },
+    {
+      "id": "a070",
+      "answerable": true,
+      "question": "What kind of software engineering role focuses on building and improving core backend infrastructure, leading technical design, and mentoring other engineers?",
+      "job_id": 1036,
+      "chunk_id": 3149,
+      "gold_job_ids": [
+        1036
+      ],
+      "company": "Hex",
+      "title": "Software Engineer, Foundations",
+      "section": "WHAT YOU'LL DO"
+    },
+    {
+      "id": "a071",
+      "answerable": true,
+      "question": "What is the typical salary range and benefits package for a senior backend platform engineering role that offers equity and flexible PTO?",
+      "job_id": 1040,
+      "chunk_id": 5922,
+      "gold_job_ids": [
+        1040
+      ],
+      "company": "Hex",
+      "title": "Staff Software Engineer, Backend (Platform)",
+      "section": "OUR STACK"
+    },
+    {
+      "id": "a072",
+      "answerable": true,
+      "question": "What front\u2011end engineering positions focus on building large\u2011scale React applications, require experience with OAuth/WebAuthN, and value clean, readable code?",
+      "job_id": 598,
+      "chunk_id": 3449,
+      "gold_job_ids": [
+        598
+      ],
+      "company": "Squarespace",
+      "title": "Software Engineer, Frontend ",
+      "section": "Who We're Looking For"
+    },
+    {
+      "id": "a073",
+      "answerable": true,
+      "question": "What are the remote work options and office locations for a senior full\u2011stack engineering role that supports North American and European candidates and emphasizes asynchronous collaboration?",
+      "job_id": 837,
+      "chunk_id": 4811,
+      "gold_job_ids": [
+        837,
+        838
+      ],
+      "company": "Linear",
+      "title": "Senior / Staff Fullstack Engineer",
+      "section": "Location & work mode"
+    },
+    {
+      "id": "a074",
+      "answerable": true,
+      "question": "What benefits does a senior full\u2011stack engineering position at a small, remote\u2011first startup offer, such as salary, equity, vacation, parental leave, and work\u2011related perks?",
+      "job_id": 838,
+      "chunk_id": 4823,
+      "gold_job_ids": [
+        837,
+        838
+      ],
+      "company": "Linear",
+      "title": "Senior / Staff Fullstack Engineer",
+      "section": "What we offer"
+    },
+    {
+      "id": "u001",
+      "answerable": false,
+      "question": "Are there any underwater welding jobs in Antarctica?"
+    },
+    {
+      "id": "u002",
+      "answerable": false,
+      "question": "Which hospitals are hiring registered nurses for night shifts?"
+    },
+    {
+      "id": "u003",
+      "answerable": false,
+      "question": "Find me CDL truck driving jobs with sign-on bonuses."
+    },
+    {
+      "id": "u004",
+      "answerable": false,
+      "question": "Any pastry chef openings at French restaurants?"
+    },
+    {
+      "id": "u005",
+      "answerable": false,
+      "question": "Which schools are hiring high school math teachers?"
+    },
+    {
+      "id": "u006",
+      "answerable": false,
+      "question": "What real estate agent roles offer a commission split above 70%?"
+    },
+    {
+      "id": "u007",
+      "answerable": false,
+      "question": "Are airlines hiring first officers with 1,500 flight hours?"
+    },
+    {
+      "id": "u008",
+      "answerable": false,
+      "question": "Which veterinary clinics need a vet tech on weekends?"
+    },
+    {
+      "id": "u009",
+      "answerable": false,
+      "question": "Warehouse forklift operator jobs paying over $25 an hour?"
+    },
+    {
+      "id": "u010",
+      "answerable": false,
+      "question": "Dental hygienist positions that offer a four-day work week?"
+    }
+  ]
+}

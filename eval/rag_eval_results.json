@@ -1,0 +1,307 @@
+{
+  "retrieval": {
+    "n": 74,
+    "results": {
+      "dense": {
+        "hit@1": 0.405,
+        "hit@5": 0.581,
+        "hit@10": 0.676,
+        "mrr@10": 0.499,
+        "p50 ms": 55.5
+      },
+      "lexical": {
+        "hit@1": 0.554,
+        "hit@5": 0.73,
+        "hit@10": 0.838,
+        "mrr@10": 0.64,
+        "p50 ms": 23.1
+      },
+      "hybrid": {
+        "hit@1": 0.514,
+        "hit@5": 0.824,
+        "hit@10": 0.919,
+        "mrr@10": 0.647,
+        "p50 ms": 84.6
+      }
+    },
+    "misses@10": {
+      "dense": [
+        "a006",
+        "a007",
+        "a009",
+        "a013",
+        "a015",
+        "a016",
+        "a017",
+        "a020",
+        "a022",
+        "a024",
+        "a032",
+        "a033",
+        "a045",
+        "a049",
+        "a051",
+        "a052",
+        "a059",
+        "a061",
+        "a062",
+        "a066",
+        "a069",
+        "a072",
+        "a073",
+        "a074"
+      ],
+      "lexical": [
+        "a009",
+        "a013",
+        "a014",
+        "a015",
+        "a018",
+        "a027",
+        "a049",
+        "a051",
+        "a056",
+        "a068",
+        "a070",
+        "a072"
+      ],
+      "hybrid": [
+        "a007",
+        "a009",
+        "a015",
+        "a018",
+        "a049",
+        "a072"
+      ]
+    }
+  },
+  "ablation": {
+    "n": 74,
+    "results": {
+      "sections + headers (prod)": {
+        "hit@1": 0.405,
+        "hit@5": 0.581,
+        "hit@10": 0.676,
+        "mrr@10": 0.499,
+        "chunks": 5928
+      },
+      "sections, no headers": {
+        "hit@1": 0.243,
+        "hit@5": 0.405,
+        "hit@10": 0.527,
+        "mrr@10": 0.334,
+        "chunks": 5928
+      },
+      "fixed 200w windows": {
+        "hit@1": 0.176,
+        "hit@5": 0.284,
+        "hit@10": 0.392,
+        "mrr@10": 0.222,
+        "chunks": 5784
+      },
+      "whole posting (1 vector)": {
+        "hit@1": 0.189,
+        "hit@5": 0.351,
+        "hit@10": 0.473,
+        "mrr@10": 0.256,
+        "chunks": 1040
+      }
+    }
+  },
+  "answers": {
+    "summary": {
+      "answerable_n": 15,
+      "answered_%": 100,
+      "false_abstain_%": 0,
+      "ungrounded_%": 0,
+      "needed_retry_%": 0,
+      "gold_in_context_%": 86.7,
+      "gold_cited_%": 80.0,
+      "gold_cited_when_in_context_%": 92.3,
+      "unanswerable_n": 10,
+      "correct_abstain_%": 100
+    },
+    "rows": [
+      {
+        "id": "a042",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": false
+      },
+      {
+        "id": "a020",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": false,
+        "gold_cited": false
+      },
+      {
+        "id": "a051",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a007",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": false,
+        "gold_cited": false
+      },
+      {
+        "id": "a010",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a069",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a013",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a047",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a008",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a065",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a028",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a003",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a006",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a064",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "a027",
+        "answerable": true,
+        "status": "answered",
+        "attempts": 1,
+        "gold_retrieved": true,
+        "gold_cited": true
+      },
+      {
+        "id": "u001",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u002",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u003",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u004",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u005",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u006",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u007",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u008",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u009",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      },
+      {
+        "id": "u010",
+        "answerable": false,
+        "status": "abstained",
+        "attempts": 1
+      }
+    ]
+  }
+}

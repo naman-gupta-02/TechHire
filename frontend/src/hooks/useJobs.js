@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-
-const API_BASE = 'http://localhost:8000'
+import { API_BASE } from '../utils/api'
 
 async function fetchJobs(filters, page, pageSize) {
   const params = new URLSearchParams()
